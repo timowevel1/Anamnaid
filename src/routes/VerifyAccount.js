@@ -1,11 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const MySQL = require("../database/MySQL");
-const Session = require("../services/SessionManagerService");
-const Password = require("../services/PasswordHasherService");
-const Email = require("../services/EmailSenderService");
-const crypto = require("crypto");
-const e = require("express");
 
 
 router.get("/",(req, res) => {
