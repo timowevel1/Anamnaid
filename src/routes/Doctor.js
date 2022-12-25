@@ -4,4 +4,4 @@ const MySQL = require("../database/MySQL");
 
 
 
-module.exports = {router};
+module.exports = { router };

@@ -7,11 +7,10 @@ function sendVerificationMail(email, token){
         from: '"Timo Wevelsiep - Anamnaid" <anamnaid@timowevelsiep.de>',
         to: email,
         subject: 'Verify your Anamnaid account!',
-        text: 'Hey, \nplease click the following link to verify your Anamnaid account: http://localhost:3000/verify/?token_verification=' + token
+        text: "Hey, \nplease click the following link to verify your Anamnaid account: " + process.env.SITE_URL + "/verify/?token_verification=" + token
     };
     transporter.sendMail(mailOptions, function(err, info){
-        if (err) throw err;
-        console.log('Message sent: ' + info.response);
+        if (err) console.log(err);
     });
 }
 

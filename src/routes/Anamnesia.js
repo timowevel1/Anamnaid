@@ -6,7 +6,7 @@ const Patient = require("../routes/Patient");
 
 router.get("/",async (req, res) => {
     //Get all Anamnesia Data belonging to a user
-    if(req.body.session && Session.verifyToken(req.body.session)){
+    if(req.body.session){
         const profile = Session.verifyToken(req.body.session);
         if(profile){
             let id = await Patient.getUserID(profile.email);
@@ -19,14 +19,14 @@ router.get("/",async (req, res) => {
                     }
                 });
             } else res.sendStatus(500);
-        }
+        } else res.sendStatus(500);
     } else res.sendStatus(403);
 });
 
 
 router.post("/",async (req,res) => {
     //Add new user anamnesia data
-    if(req.body.session && Session.verifyToken(req.body.session)){
+    if(req.body.session){
         const profile = Session.verifyToken(req.body.session);
         if(profile){
             let id = await Patient.getUserID(profile.email);
@@ -36,11 +36,10 @@ router.post("/",async (req,res) => {
                         res.sendStatus(500);
                     } else res.sendStatus(200);
                 });
-            }
-
-        }
-    }
+            } else res.sendStatus(500);
+        } else res.sendStatus(500);
+    } else res.sendStatus(403);
 })
 
 
-module.exports = {router};
+module.exports = { router };
