@@ -20,7 +20,7 @@ router.get("/",(req, res) => {
                     } else {
                         res.send("Dieser Account wurde bereits verifiziert! Du kannst dich in der App anmelden.");
                     }
-                } else res.sendStatus(404); //User with provided verification token doesnt exist
+                } else res.sendStatus(404); //User with provided verification token doesn't exist
             }
         })
     } else console.log(req.params);

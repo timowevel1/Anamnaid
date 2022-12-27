@@ -4,7 +4,7 @@ var transporter = nodemailer.createTransport(connection);
 
 function sendVerificationMail(email, token){
     var mailOptions = {
-        from: '"Timo Wevelsiep - Anamnaid" <anamnaid@timowevelsiep.de>',
+        from: `"Anamnaid" <${process.env.EMAIL_FROM}>`,
         to: email,
         subject: 'Verify your Anamnaid account!',
         text: "Hey, \nplease click the following link to verify your Anamnaid account: " + process.env.SITE_URL + "/verify/?token_verification=" + token
