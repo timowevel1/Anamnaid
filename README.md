@@ -21,8 +21,8 @@ and fill the necessary information. For the database setup, import the database.
 
 ## Roadmap
 
-- Create client app for mobile
-- Create webapp for managing submitted anamnesia data (for the doctors)
+- Create client app for mobile (frontend)
+- Create webapp for managing submitted anamnesia data (for the doctors) (frontend)
 
 
 ## API Reference
