@@ -1,4 +1,30 @@
 
+# Anamnaid
+
+Let patients submit their anamnesia data digitally and so save paperwork and time.
+
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm start
+```
+
+Copy the .env.example to .env with
+```bash
+  cp .env.example .env
+```
+and fill the necessary information. For the database setup, import the database.sql and fill the database credentials into the .env.
+
+
+## Roadmap
+
+- Create client app for mobile
+- Create webapp for managing submitted anamnesia data (for the doctors)
+
+
 ## API Reference
 
 #### Login user and obtain user data
