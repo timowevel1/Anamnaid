@@ -1,9 +1,9 @@
-var nodemailer = require('nodemailer');
-var connection = process.env.MAILURL;
-var transporter = nodemailer.createTransport(connection);
+const nodemailer = require('nodemailer');
+const connection = process.env.MAILURL;
+const transporter = nodemailer.createTransport(connection);
 
 function sendVerificationMail(email, token){
-    var mailOptions = {
+    let mailOptions = {
         from: `"Anamnaid" <${process.env.EMAIL_FROM}>`,
         to: email,
         subject: 'Verify your Anamnaid account!',
