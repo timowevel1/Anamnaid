@@ -89,5 +89,14 @@ only anamnesia data which was submitted to the provided doctor gets returned.
 | `content` | `int` | Anamnesia form as JSON |
 
 
+#### Verify user account
 
+```http
+  GET /verify/
+```
 
+| Query parameter      | Type     | Description              |
+|:---------------------| :------- |:-------------------------|
+| `token_verification` | `string` | Token received via email |
+
+Changes the verified status of an account to verified.
